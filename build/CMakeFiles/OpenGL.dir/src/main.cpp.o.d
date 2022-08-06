@@ -150,6 +150,13 @@ CMakeFiles/OpenGL.dir/src/main.cpp.o: \
  /usr/include/c++/12.1.0/backward/auto_ptr.h \
  /usr/include/c++/12.1.0/pstl/glue_memory_defs.h \
  /usr/include/c++/12.1.0/pstl/execution_defs.h \
+ /usr/include/c++/12.1.0/fstream /usr/include/c++/12.1.0/bits/codecvt.h \
+ /usr/include/c++/12.1.0/x86_64-pc-linux-gnu/bits/basic_file.h \
+ /usr/include/c++/12.1.0/x86_64-pc-linux-gnu/bits/c++io.h \
+ /usr/include/c++/12.1.0/bits/fstream.tcc /usr/include/c++/12.1.0/sstream \
+ /usr/include/c++/12.1.0/bits/sstream.tcc \
+ /home/christian/repos/OpenGl/src/../libraries/stb_image/stb_image.h \
+ /usr/include/c++/12.1.0/stdlib.h \
  /home/christian/repos/OpenGl/libraries/GLAD/include/glad/glad.h \
  /home/christian/repos/OpenGl/libraries/GLAD/include/KHR/khrplatform.h \
  /home/christian/repos/OpenGl/libraries/GLFW/include/GLFW/glfw3.h \
@@ -378,4 +385,6 @@ CMakeFiles/OpenGL.dir/src/main.cpp.o: \
  /usr/include/c++/12.1.0/cstring /usr/include/string.h \
  /usr/include/strings.h \
  /home/christian/repos/OpenGl/libraries/glm/glm/gtc/type_ptr.inl \
- /home/christian/repos/OpenGl/src/window.hpp
+ /home/christian/repos/OpenGl/src/window.hpp \
+ /home/christian/repos/OpenGl/src/shader.hpp \
+ /home/christian/repos/OpenGl/src/Texture.hpp
