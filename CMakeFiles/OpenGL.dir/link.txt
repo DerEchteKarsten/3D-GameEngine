@@ -1,1 +1,0 @@
-/usr/bin/c++ -rdynamic CMakeFiles/OpenGL.dir/src/main.o -o OpenGL 

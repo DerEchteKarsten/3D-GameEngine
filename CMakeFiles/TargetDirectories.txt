@@ -1,3 +1,0 @@
-/home/christian/repos/OpenGl/CMakeFiles/OpenGL.dir
-/home/christian/repos/OpenGl/CMakeFiles/edit_cache.dir
-/home/christian/repos/OpenGl/CMakeFiles/rebuild_cache.dir
