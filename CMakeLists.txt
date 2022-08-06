@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 3.13.4)
 project(OpenGL)
 
 
-#@Aneroy: pls do my homework, fix it 
 add_executable(${PROJECT_NAME} 
     src/main.cpp 
     src/common.hpp

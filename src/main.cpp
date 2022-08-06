@@ -2,8 +2,8 @@
 #include "window.hpp"
 #include "shader.hpp"
 #include "Texture.hpp"
-//Temp Data
 
+//Temp Data
 float vertices[] = {
     // positions          // colors           // texture coords
      0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // top right
@@ -61,12 +61,12 @@ int main(){
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW); 
 
     
-    Texture testTex = Texture("assets/container.jpg");
+    Texture testTex = Texture("../assets/container.jpg");
 
 
     glBindVertexArray(VAO);
     Bind(shader);
-
+    Bind(testTex);
 
     while(!glfwWindowShouldClose(Window::Window))
     {
@@ -78,11 +78,9 @@ int main(){
         vec3 Value = { (sin(timeValue) / 1.0f) + 0.5f,
                        (cos(timeValue) / 2.0f) + 1.0f,
                        (cos(timeValue) / 3.0f) + 0.5f };
-
-        setUniform(shader, "TimeColor", {Value, 1.0f});
         
 
-        glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, 0);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
         Window::Update();
     }
