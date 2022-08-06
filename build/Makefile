@@ -226,6 +226,30 @@ glad/fast:
 	$(MAKE) $(MAKESILENT) -f libraries/GLAD/CMakeFiles/glad.dir/build.make libraries/GLAD/CMakeFiles/glad.dir/build
 .PHONY : glad/fast
 
+libraries/stb_image/stb_image.o: libraries/stb_image/stb_image.cpp.o
+.PHONY : libraries/stb_image/stb_image.o
+
+# target to build an object file
+libraries/stb_image/stb_image.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/stb_image/stb_image.cpp.o
+.PHONY : libraries/stb_image/stb_image.cpp.o
+
+libraries/stb_image/stb_image.i: libraries/stb_image/stb_image.cpp.i
+.PHONY : libraries/stb_image/stb_image.i
+
+# target to preprocess a source file
+libraries/stb_image/stb_image.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/stb_image/stb_image.cpp.i
+.PHONY : libraries/stb_image/stb_image.cpp.i
+
+libraries/stb_image/stb_image.s: libraries/stb_image/stb_image.cpp.s
+.PHONY : libraries/stb_image/stb_image.s
+
+# target to generate assembly for a file
+libraries/stb_image/stb_image.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/stb_image/stb_image.cpp.s
+.PHONY : libraries/stb_image/stb_image.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -267,6 +291,9 @@ help:
 	@echo "... OpenGL"
 	@echo "... glad"
 	@echo "... glfw"
+	@echo "... libraries/stb_image/stb_image.o"
+	@echo "... libraries/stb_image/stb_image.i"
+	@echo "... libraries/stb_image/stb_image.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

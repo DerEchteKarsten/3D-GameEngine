@@ -7,6 +7,10 @@ add_executable(${PROJECT_NAME}
     src/main.cpp 
     src/common.hpp
     src/window.hpp
+    src/shader.hpp
+    src/Texture.hpp
+    libraries/stb_image/stb_image.cpp
+    libraries/stb_image/stb_image.h
 )
 
 find_package(Git QUIET) 

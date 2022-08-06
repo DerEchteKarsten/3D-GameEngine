@@ -167,12 +167,12 @@ CMakeFiles/OpenGL.dir/all: libraries/GLFW/src/CMakeFiles/glfw.dir/all
 CMakeFiles/OpenGL.dir/all: libraries/GLAD/CMakeFiles/glad.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/christian/repos/OpenGl/build/CMakeFiles --progress-num=1,2 "Built target OpenGL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/christian/repos/OpenGl/build/CMakeFiles --progress-num=1,2,3 "Built target OpenGL"
 .PHONY : CMakeFiles/OpenGL.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/OpenGL.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/christian/repos/OpenGl/build/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/christian/repos/OpenGl/build/CMakeFiles 29
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/OpenGL.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/christian/repos/OpenGl/build/CMakeFiles 0
 .PHONY : CMakeFiles/OpenGL.dir/rule
@@ -219,7 +219,7 @@ libraries/GLFW/CMakeFiles/uninstall.dir/clean:
 libraries/GLFW/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) $(MAKESILENT) -f libraries/GLFW/src/CMakeFiles/glfw.dir/build.make libraries/GLFW/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/GLFW/src/CMakeFiles/glfw.dir/build.make libraries/GLFW/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/christian/repos/OpenGl/build/CMakeFiles --progress-num=5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/christian/repos/OpenGl/build/CMakeFiles --progress-num=6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29 "Built target glfw"
 .PHONY : libraries/GLFW/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
@@ -245,7 +245,7 @@ libraries/GLFW/src/CMakeFiles/glfw.dir/clean:
 libraries/GLFW/src/CMakeFiles/update_mappings.dir/all:
 	$(MAKE) $(MAKESILENT) -f libraries/GLFW/src/CMakeFiles/update_mappings.dir/build.make libraries/GLFW/src/CMakeFiles/update_mappings.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/GLFW/src/CMakeFiles/update_mappings.dir/build.make libraries/GLFW/src/CMakeFiles/update_mappings.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/christian/repos/OpenGl/build/CMakeFiles --progress-num=29 "Built target update_mappings"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/christian/repos/OpenGl/build/CMakeFiles --progress-num=30 "Built target update_mappings"
 .PHONY : libraries/GLFW/src/CMakeFiles/update_mappings.dir/all
 
 # Build rule for subdir invocation for target.
@@ -271,7 +271,7 @@ libraries/GLFW/src/CMakeFiles/update_mappings.dir/clean:
 libraries/GLAD/CMakeFiles/glad.dir/all:
 	$(MAKE) $(MAKESILENT) -f libraries/GLAD/CMakeFiles/glad.dir/build.make libraries/GLAD/CMakeFiles/glad.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/GLAD/CMakeFiles/glad.dir/build.make libraries/GLAD/CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/christian/repos/OpenGl/build/CMakeFiles --progress-num=3,4 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/christian/repos/OpenGl/build/CMakeFiles --progress-num=4,5 "Built target glad"
 .PHONY : libraries/GLAD/CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.

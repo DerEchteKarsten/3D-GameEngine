@@ -3,6 +3,9 @@
 #include <iostream>
 #include <string>
 #include <memory>
+#include <fstream>
+#include <sstream>
+#include "../libraries/stb_image/stb_image.h"
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>

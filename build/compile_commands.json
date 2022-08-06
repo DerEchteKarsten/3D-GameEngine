@@ -5,6 +5,11 @@
   "file": "/home/christian/repos/OpenGl/src/main.cpp"
 },
 {
+  "directory": "/home/christian/repos/OpenGl/build",
+  "command": "/usr/bin/g++  -I/home/christian/repos/OpenGl/libraries/GLAD/include -I/home/christian/repos/OpenGl/libraries/glm/glm -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/glm -g -o CMakeFiles/OpenGL.dir/libraries/stb_image/stb_image.cpp.o -c /home/christian/repos/OpenGl/libraries/stb_image/stb_image.cpp",
+  "file": "/home/christian/repos/OpenGl/libraries/stb_image/stb_image.cpp"
+},
+{
   "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
   "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/context.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/context.c",
   "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/context.c"

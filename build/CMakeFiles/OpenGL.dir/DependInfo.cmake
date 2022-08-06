@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/christian/repos/OpenGl/libraries/stb_image/stb_image.cpp" "CMakeFiles/OpenGL.dir/libraries/stb_image/stb_image.cpp.o" "gcc" "CMakeFiles/OpenGL.dir/libraries/stb_image/stb_image.cpp.o.d"
   "/home/christian/repos/OpenGl/src/main.cpp" "CMakeFiles/OpenGL.dir/src/main.cpp.o" "gcc" "CMakeFiles/OpenGL.dir/src/main.cpp.o.d"
   )
 
