@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/OpenGL.dir/src/main.cpp.o -o OpenGL   -L/home/christian/repos/OpenGl/libraries/GLFW/src  -Wl,-rpath,/home/christian/repos/OpenGl/libraries/GLFW/src libraries/GLAD/libglad.a libraries/GLFW/src/libglfw3.a /usr/lib/librt.a -lm -ldl 

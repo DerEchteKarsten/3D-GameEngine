@@ -1,0 +1,127 @@
+[
+{
+  "directory": "/home/christian/repos/OpenGl/build",
+  "command": "/usr/bin/g++  -I/home/christian/repos/OpenGl/libraries/GLAD/include -I/home/christian/repos/OpenGl/libraries/glm/glm -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/glm -g -o CMakeFiles/OpenGL.dir/src/main.cpp.o -c /home/christian/repos/OpenGl/src/main.cpp",
+  "file": "/home/christian/repos/OpenGl/src/main.cpp"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/context.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/context.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/context.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/init.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/init.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/init.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/input.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/input.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/input.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/monitor.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/monitor.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/monitor.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/platform.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/platform.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/platform.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/vulkan.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/vulkan.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/vulkan.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/window.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/window.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/window.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/egl_context.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/egl_context.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/egl_context.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/osmesa_context.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/osmesa_context.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/osmesa_context.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/null_init.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/null_init.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/null_init.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/null_monitor.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/null_monitor.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/null_monitor.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/null_window.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/null_window.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/null_window.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/null_joystick.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/null_joystick.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/null_joystick.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/posix_module.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/posix_module.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/posix_module.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/posix_time.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/posix_time.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/posix_time.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/posix_thread.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/posix_thread.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/posix_thread.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/x11_init.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/x11_init.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/x11_init.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/x11_monitor.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/x11_monitor.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/x11_monitor.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/x11_window.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/x11_window.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/x11_window.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/xkb_unicode.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/xkb_unicode.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/xkb_unicode.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/glx_context.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/glx_context.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/glx_context.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/linux_joystick.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/linux_joystick.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/linux_joystick.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLFW/src",
+  "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/christian/repos/OpenGl/libraries/GLFW/include -I/home/christian/repos/OpenGl/libraries/GLFW/src -I/home/christian/repos/OpenGl/build/libraries/GLFW/src -g -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/posix_poll.c.o -c /home/christian/repos/OpenGl/libraries/GLFW/src/posix_poll.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLFW/src/posix_poll.c"
+},
+{
+  "directory": "/home/christian/repos/OpenGl/build/libraries/GLAD",
+  "command": "/usr/bin/gcc  -I/home/christian/repos/OpenGl/libraries/GLAD/include -g -o CMakeFiles/glad.dir/src/glad.c.o -c /home/christian/repos/OpenGl/libraries/GLAD/src/glad.c",
+  "file": "/home/christian/repos/OpenGl/libraries/GLAD/src/glad.c"
+}
+]
