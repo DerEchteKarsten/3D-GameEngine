@@ -2,6 +2,7 @@
 #include "window.hpp"
 #include "shader.hpp"
 #include "Texture.hpp"
+#include "Camera.hpp"
 
 //Temp Data
 float vertices[] = {
@@ -20,15 +21,11 @@ unsigned int indices[] = {
 
 int main(){
 
+    using namespace glm;
+
     Window::innit();
 
-
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
+    glEnable(GL_DEPTH_TEST);  
 
     //VBO
     unsigned int VBO;
@@ -60,7 +57,8 @@ int main(){
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW); 
 
-    
+    Camera mainCamera = Camera({0.0f, 0.0f, -3.0f});
+
     Texture testTex = Texture("../assets/container.jpg", GL_TEXTURE0);
     Texture testTex2 = Texture("../assets/Shrek.jpg", GL_TEXTURE1);
 
@@ -71,16 +69,19 @@ int main(){
     setUniform(shader, "Texture2", 1);
     glBindVertexArray(VAO);
 
+    mat4 model = mat4(1.0f);
+    model = rotate(model, glm::radians(-55.0f), vec3(1.0f, 0.0f, 0.0f)); 
+
     while(!glfwWindowShouldClose(Window::Window))
     {
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+        ControlCamera(&mainCamera, Window::Window);
 
-        float timeValue = glfwGetTime() * 1.5f;
-        float Value = (sin(timeValue));
-
-        setUniform(shader, "Time", Value);
+        setUniform(shader, "projection", mainCamera.Projection);
+        setUniform(shader, "model", model);
+        setUniform(shader, "view", mainCamera.ViewMatrix);
 
 
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);

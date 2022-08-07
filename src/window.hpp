@@ -34,7 +34,7 @@ namespace Window{
         glfwSwapBuffers(Window);
         glfwPollEvents();
 
-        if(glfwGetKey(Window, GLFW_KEY_W) == true){
+        if(glfwGetKey(Window, GLFW_KEY_1) == true){
             glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         }
         else {

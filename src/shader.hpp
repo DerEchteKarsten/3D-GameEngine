@@ -108,3 +108,7 @@ void setUniform(Shader s, const std::string &name, glm::vec3 value){
 void setUniform(Shader s, const std::string &name, glm::vec4 value){ 
     GLCatchError(glUniform4f(glGetUniformLocation(s.ID, name.c_str()), value.x, value.y, value.z, value.w)); 
 } 
+
+void setUniform(Shader s, const std::string &name, glm::mat4 value){ 
+    GLCatchError(glUniformMatrix4fv(glGetUniformLocation(s.ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(value))); 
+} 

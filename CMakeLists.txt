@@ -9,6 +9,8 @@ add_executable(${PROJECT_NAME}
     src/shader.hpp
     src/Texture.hpp
     src/ErrorHandeler.hpp
+    src/Camera.hpp
+    src/Mesh.hpp
     libraries/stb_image/stb_image.cpp
     libraries/stb_image/stb_image.h
 )
