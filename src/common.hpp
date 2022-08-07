@@ -6,6 +6,7 @@
 #include <fstream>
 #include <sstream>
 #include "../libraries/stb_image/stb_image.h"
+#include "ErrorHandeler.hpp"
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>

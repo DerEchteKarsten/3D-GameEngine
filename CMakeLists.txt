@@ -8,6 +8,7 @@ add_executable(${PROJECT_NAME}
     src/window.hpp
     src/shader.hpp
     src/Texture.hpp
+    src/ErrorHandeler.hpp
     libraries/stb_image/stb_image.cpp
     libraries/stb_image/stb_image.h
 )

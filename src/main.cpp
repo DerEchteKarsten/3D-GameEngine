@@ -38,7 +38,7 @@ int main(){
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
     //Shaders
-    Shader shader = Shader("src/shaders/default.vs", "src/shaders/default.fs");
+    Shader shader = Shader("../shaders/default.vs", "../shaders/default.fs");
 
     //VAO
     unsigned int VAO;
@@ -61,12 +61,15 @@ int main(){
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW); 
 
     
-    Texture testTex = Texture("../assets/container.jpg");
+    Texture testTex = Texture("../assets/container.jpg", GL_TEXTURE0);
+    Texture testTex2 = Texture("../assets/Shrek.jpg", GL_TEXTURE1);
 
-
-    glBindVertexArray(VAO);
     Bind(shader);
-    Bind(testTex);
+    Bind(testTex, GL_TEXTURE0);
+    Bind(testTex2, GL_TEXTURE1);
+    setUniform(shader, "Texture1", 0);
+    setUniform(shader, "Texture2", 1);
+    glBindVertexArray(VAO);
 
     while(!glfwWindowShouldClose(Window::Window))
     {
@@ -74,11 +77,11 @@ int main(){
         glClear(GL_COLOR_BUFFER_BIT);
 
 
-        float timeValue = glfwGetTime();
-        vec3 Value = { (sin(timeValue) / 1.0f) + 0.5f,
-                       (cos(timeValue) / 2.0f) + 1.0f,
-                       (cos(timeValue) / 3.0f) + 0.5f };
-        
+        float timeValue = glfwGetTime() * 1.5f;
+        float Value = (sin(timeValue));
+
+        setUniform(shader, "Time", Value);
+
 
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
