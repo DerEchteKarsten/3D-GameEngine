@@ -9,7 +9,9 @@ struct Camera {
     mat4 Projection;
     float RenderDistance;
     float FOV;
+	vec3 position;
     Camera(vec3 position, float FOV = radians(45.0f), float renderDistance = 100.0f){
+		this->position = position;
         Projection = perspective(FOV, Window::WindowSize.x / Window::WindowSize.y, 0.1f, renderDistance);
         ViewMatrix = mat4(1.0f);
         ViewMatrix = translate(position);
@@ -25,7 +27,6 @@ void ChangeFOV(Camera c, float value){
 
 namespace 
 {
-    vec3 cameraPosition;
     float speed = 1.0f;
     glm::vec3 Orientation = glm::vec3(0.0f, 0.0f, -1.0f);
     glm::vec3 Up = glm::vec3(0.0f, 1.0f, 0.0f);
@@ -39,23 +40,23 @@ void ControlCamera(Camera* c, GLFWwindow* window)
 	// Handles key inputs
 	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
 	{
-		cameraPosition += speed * Orientation;
+		c->position += speed * Orientation;
 	}
 	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
 	{
-		cameraPosition += speed * -glm::normalize(glm::cross(Orientation, Up));
+		c->position += speed * -glm::normalize(glm::cross(Orientation, Up));
 	}
 	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
 	{
-		cameraPosition += speed * -Orientation;
+		c->position += speed * -Orientation;
 	}
 	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
 	{
-		cameraPosition += speed * glm::normalize(glm::cross(Orientation, Up));
+		c->position += speed * glm::normalize(glm::cross(Orientation, Up));
 	}
 	if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)
 	{
-		cameraPosition += speed * Up;
+		c->position += speed * Up;
 	}
 	if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS)
 	{
@@ -63,7 +64,7 @@ void ControlCamera(Camera* c, GLFWwindow* window)
 	}
 	if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
 	{
-		cameraPosition += speed * -Up;
+		c->position += speed * -Up;
 	}
 	else if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_RELEASE)
 	{
@@ -105,6 +106,6 @@ void ControlCamera(Camera* c, GLFWwindow* window)
 		firstClick = true;
 	}
 
-    c->ViewMatrix = lookAt(cameraPosition, cameraPosition + Orientation, Up);
+    c->ViewMatrix = lookAt(c->position, c->position + Orientation, Up);
 
 }
