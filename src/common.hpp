@@ -5,6 +5,7 @@
 #include <memory>
 #include <fstream>
 #include <sstream>
+#include <vector>
 #include "../libraries/stb_image/stb_image.h"
 #include "ErrorHandeler.hpp"
 
