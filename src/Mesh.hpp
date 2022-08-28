@@ -7,58 +7,62 @@
 struct Mesh
 {
     Shader shader;
-    mat4 model;
+    mat4 modelMatrix;
     std::vector<Texture> Textures;
+    unsigned int VAO;
+    unsigned int triangleCount;
 };
 
-Mesh CreateMesh(std::vector<float> vertices, std::vector<unsigned int> indices){
+Mesh CreateMesh(std::vector<float> vertices, std::vector<unsigned int> indices, Shader shader, std::vector<Texture> textures = {}){
     //VBO
     unsigned int VBO;
-    glGenBuffers(1, &VBO);
+    GL_CATCH_ERROR(glGenBuffers(1, &VBO));
 
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);  
-    glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(float), vertices.data(), GL_STATIC_DRAW);
+    GL_CATCH_ERROR(glBindBuffer(GL_ARRAY_BUFFER, VBO)); 
+    GL_CATCH_ERROR(glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(float), vertices.data(), GL_STATIC_DRAW));
 
     //Shaders
-    Shader shader = Shader("../shaders/default.vs", "../shaders/default.fs");
 
     //VAO
     unsigned int VAO;
-    glGenVertexArrays(1, &VAO); 
-    glBindVertexArray(VAO);
+    GL_CATCH_ERROR(glGenVertexArrays(1, &VAO)); 
+    GL_CATCH_ERROR(glBindVertexArray(VAO));
    // position attribute
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
-    glEnableVertexAttribArray(0);
+    GL_CATCH_ERROR(glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 11 * sizeof(float), (void*)0));
+    GL_CATCH_ERROR(glEnableVertexAttribArray(0));
     // color attribute
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
-    glEnableVertexAttribArray(1);
+    GL_CATCH_ERROR(glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 11 * sizeof(float), (void*)(3 * sizeof(float))));
+    GL_CATCH_ERROR(glEnableVertexAttribArray(1));
     // texture coord attribute
-    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
-    glEnableVertexAttribArray(2);
+    GL_CATCH_ERROR(glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 11 * sizeof(float), (void*)(6 * sizeof(float))));
+    GL_CATCH_ERROR(glEnableVertexAttribArray(2));
+    // normal attribute
+    GL_CATCH_ERROR(glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, 11 * sizeof(float), (void*)(8 * sizeof(float))));
+    GL_CATCH_ERROR(glEnableVertexAttribArray(3));
 
     //EBO
     unsigned int EBO;
-    glGenBuffers(1, &EBO);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW); 
+    GL_CATCH_ERROR(glGenBuffers(1, &EBO));
+    GL_CATCH_ERROR(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO));
+    GL_CATCH_ERROR(glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW)); 
 
-    Texture testTex = Texture("../assets/container.jpg", GL_TEXTURE0);
-    Texture testTex2 = Texture("../assets/Shrek.jpg", GL_TEXTURE1);
 
-    Bind(shader);
-    Bind(testTex, GL_TEXTURE0);
-    Bind(testTex2, GL_TEXTURE1);
-    setUniform(shader, "Texture1", 0);
-    setUniform(shader, "Texture2", 1);
-    glBindVertexArray(VAO);
 
     mat4 model = mat4(1.0f);
-    model = rotate(model, glm::radians(-55.0f), vec3(1.0f, 0.0f, 0.0f));
 
-    return Mesh{shader, model};
+    return Mesh{shader, model, textures, VAO, (unsigned int)indices.size()};
 }
 
-void DrawMesh(Mesh m){
-    setUniform(m.shader, "model", m.model);
-    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+void DrawMesh(Mesh* m){
+    Bind(m->shader);
+
+    for (int i = 0; i < m->Textures.size(); i++) {
+        Bind(m->Textures[i], GL_TEXTURE0 + i);
+        setUniform(m->shader, "Texture" + std::to_string(i), 0);
+    }
+
+    glBindVertexArray(m->VAO);
+
+    setUniform(m->shader, "model", m->modelMatrix);
+    glDrawElements(GL_TRIANGLES, m->triangleCount, GL_UNSIGNED_INT, 0);
 }
