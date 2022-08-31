@@ -5,23 +5,6 @@
 #include "Camera.hpp"
 #include "Mesh.hpp"
 
-void RotateAround(vec3* Point, const vec3 Pivot, const float Angle)
-{
-    if (Angle == 0)
-        return;
-
-    float s = sin(Angle);
-    float c = cos(Angle);
-
-    Point->x -= Pivot.x;
-    Point->y -= Pivot.y;
-
-    double nx = (Point->x * c) - (Point->y * s);
-    double ny = (Point->x * s) + (Point->y * c);
-
-    Point->x = nx + Pivot.x;
-    Point->y = ny + Pivot.y;
-}
 
 std::vector<float> vertices =
 { //     COORDINATES     /        COLORS          /    TexCoord   /        NORMALS       //
@@ -86,9 +69,21 @@ std::vector<unsigned int> lightIndices =
 	4, 6, 7
 };
 
+namespace glm{
+
+	vec3 RotateAround(vec3 Point, const vec3 Pivot, const float Angle){
+		vec3 rotatedPoint = vec3(0.0f);
+		rotatedPoint.x = cos(Angle) * (Point.x - Pivot.x) - sin(Angle) * (Point.y - Pivot.y) + Pivot.x;
+		rotatedPoint.y = sin(Angle) * (Point.x - Pivot.x) + cos(Angle) * (Point.y - Pivot.y) + Pivot.y;
+
+		return rotatedPoint;
+	}	
+}
+
+
 int main(){
 
-    using namespace glm;
+	using namespace glm;
     
     Window::innit();
 
@@ -100,35 +95,37 @@ int main(){
 
     Texture ShrekTex = Texture("../assets/container.jpg", GL_TEXTURE0);
 
-    Mesh Pyramid = CreateMesh(vertices, indices, ShrekShader, {ShrekTex});
 
+    vec3 LightPos = {0.0, 1.0, 0.0};
     Mesh Light = CreateMesh(lightVertices, lightIndices, LightShader, {});
-    vec3 LightPos = {1.0, 1.0, 1.0};
-    Light.modelMatrix = glm::translate(Light.modelMatrix, LightPos);
+    Light.modelMatrix = translate(Light.modelMatrix, LightPos);
+
+    Mesh Pyramid = CreateMesh(vertices, indices, ShrekShader, {ShrekTex});
 
     while(!glfwWindowShouldClose(Window::Window))
     {
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         ControlCamera(&mainCamera, Window::Window);
 
-        RotateAround(&LightPos, {0, 0, 0}, 0.01f);
-        Light.modelMatrix = glm::translate(Light.modelMatrix, LightPos);
+        LightPos = RotateAround(LightPos, {0, 0, 0}, 0.01f);
+		Light.modelMatrix = mat4(1.0f);
+		Light.modelMatrix = translate(Light.modelMatrix, LightPos);
 
         Bind(Pyramid.shader);
         setUniform(Pyramid.shader, "projection", mainCamera.Projection);
         setUniform(Pyramid.shader, "view", mainCamera.ViewMatrix);
         setUniform(Pyramid.shader, "LightPos", LightPos);
         setUniform(Pyramid.shader, "camPos", mainCamera.position);
+        DrawMesh(&Pyramid);
 
         Bind(Light.shader);
         setUniform(Light.shader, "projection", mainCamera.Projection);
         setUniform(Light.shader, "view", mainCamera.ViewMatrix);
-
-
-        DrawMesh(&Pyramid);
         DrawMesh(&Light);
+
+
 
         Window::Update();
     }
