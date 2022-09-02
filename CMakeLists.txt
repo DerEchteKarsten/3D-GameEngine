@@ -44,7 +44,7 @@ endif()
 add_subdirectory(libraries/GLFW)
 add_subdirectory(libraries/glm)
 add_subdirectory(libraries/GLAD)
-
+add_subdirectory(libraries/assimp)
 
 target_include_directories(${PROJECT_NAME} 
     PUBLIC libraries/GLAD/include
@@ -63,3 +63,5 @@ target_include_directories(${PROJECT_NAME}
 )
 
 target_link_libraries(${PROJECT_NAME} glm)
+
+target_link_libraries(${PROJECT_NAME} assimp)

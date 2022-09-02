@@ -69,6 +69,9 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp",
-        "ranges": "cpp"
+        "ranges": "cpp",
+        "any": "cpp",
+        "codecvt": "cpp",
+        "forward_list": "cpp"
     }
 }
